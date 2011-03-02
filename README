@@ -55,14 +55,20 @@ git fetch --depth=HEAD
 Revert your changes
 ==============
 
-# Cancel a commit
-git rebase -i HEAD~2
-git mergetool
-git rebase --continue
+# Revert a file
+git checkout -- FILE 
+
+# Remove a file from staging area
+git reset FILE
 
 # Reset your updates
 git reset --hard HEAD
 
 # Reset to master on origin
 git reset --hard origin/master
+
+# Cancel a commit
+git rebase -i HEAD~2
+git mergetool
+git rebase --continue
 
