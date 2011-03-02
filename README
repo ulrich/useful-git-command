@@ -2,17 +2,24 @@
 You can add any commands or improve existing one
 However, you must follow the current pattern is:
 
-# THE_LINUX_COMMAND_EXPLANATION
+# THE_GIT_COMMAND_EXPLANATION
 THE_GIT_COMMAND_1
 THE_GIT_COMMAND_2
 ...
 ------------------------------------------------
+
+Commits
+==============
 
 # Update a commit
 git commit --amend
 
 # Reset last commit
 git reset --soft HEAD^
+
+
+Branches
+==============
 
 # To cherry-pick
 git checkout branchname
@@ -34,11 +41,6 @@ git rebase --continue
 OR
 git rebase --abort
 
-# Cancel a commit
-git rebase -i HEAD~2
-git mergetool
-git rebase --continue
-
 # Merge 2 branches
 git checkout master
 git merge branch_name
@@ -48,5 +50,19 @@ git remote prune origin
 
 # On message 'your branch is 2 commits...'
 git fetch --depth=HEAD
-------------------------
+
+
+Revert your changes
+==============
+
+# Cancel a commit
+git rebase -i HEAD~2
+git mergetool
+git rebase --continue
+
+# Reset your updates
+git reset --hard HEAD
+
+# Reset to master on origin
+git reset --hard origin/master
 
