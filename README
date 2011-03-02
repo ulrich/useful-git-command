@@ -8,4 +8,47 @@ THE_GIT_COMMAND_2
 ...
 ------------------------------------------------
 
+>>> Mettre à jour le msg d'un commit : 
+git commit --amend
+------------------------
+>>> Annuler un commit : 
+git reset --soft HEAD^
+------------------------
+>>> Cherry-picking
+git checkout la_branche
+git log
+> récupérer le sha1
+git checkout master
+git cherry-pick le_sha1
+------------------------
+>>> mettre à jour sa branche
+git checkout ma_branche
+git rebase master
+----------------------------
+>>> Avant de pusher ces commits, faire un rebase
+git pull --rebase origin master 
+
+CONFLIT
+Résolution
+>>> git add ...
+>>> git rebase --continue
+>>> ou git rebase --abort
+------------------------
+>>> Annuler / modifier ces commits
+git rebase -i HEAD~2
+git mergetool
+git rebase --continue
+------------------------
+>>> Rebaser sa branche par rapport à la 1.6
+git rebase 1.6
+------------------------
+>>> Merge sa branche
+git merge foreignProduct
+------------------------
+>>> virer les vieilles branches
+git remote prune origin
+------------------------
+>> Si "pb d'avance de branche" lors du push
+git fetch --depth=HEAD
+------------------------
 
