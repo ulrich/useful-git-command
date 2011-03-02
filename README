@@ -10,24 +10,19 @@ THE_GIT_COMMAND_2
 
 Commits
 ==============
-
 # Update a commit
 git commit --amend
 
 # Reset last commit
 git reset --soft HEAD^
 
-
 Updates
 ==============
-
 # To update all branches
 git pull --all
 
-
 Branches
 ==============
-
 # To cherry-pick
 git checkout branchname
 git log
@@ -58,10 +53,8 @@ git remote prune origin
 # On message 'your branch is 2 commits...'
 git fetch --depth=HEAD
 
-
 Revert your changes
 ==============
-
 # Revert a file
 git checkout -- FILE 
 
@@ -78,4 +71,15 @@ git reset --hard origin/master
 git rebase -i HEAD~2
 git mergetool
 git rebase --continue
+
+Update all local projects
+==============
+#!/bin/bash
+command='git pull'
+for i in `ls -d */`; do
+   echo Udating ${i}
+   cd ${i}
+   $command
+   cd ..
+done
 
