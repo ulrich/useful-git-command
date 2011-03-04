@@ -82,6 +82,23 @@ git mergetool
 git rebase --continue
 
 
+Bissect
+==============
+# begin a bissection
+git bissect start
+git bissect bad COMMIT
+git bissect good COMMIT
+
+# then, if you can, automate it
+git bissect run COMMAND
+
+# after, you may log results
+git bisect log > bisect_log.txt
+
+# and later, you may replay a log result
+git bisect replay bisect_log.txt
+
+
 Update all local projects
 ==============
 #!/bin/bash
