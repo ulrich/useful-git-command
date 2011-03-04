@@ -16,10 +16,12 @@ git commit --amend
 # Reset last commit
 git reset --soft HEAD^
 
+
 Updates
 ==============
 # To update all branches
 git pull --all
+
 
 Branches
 ==============
@@ -53,6 +55,13 @@ git remote prune origin
 # On message 'your branch is 2 commits...'
 git fetch --depth=HEAD
 
+
+Differences
+==============
+# View changes in a file
+git log -p FILE
+
+
 Revert your changes
 ==============
 # Revert a file
@@ -71,6 +80,7 @@ git reset --hard origin/master
 git rebase -i HEAD~2
 git mergetool
 git rebase --continue
+
 
 Update all local projects
 ==============
