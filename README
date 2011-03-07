@@ -61,6 +61,12 @@ Differences
 # View changes in a file
 git log -p FILE
 
+# View changes between head and a commit
+git diff SHA1
+
+# View changes between 2 commits
+git diff SHA1 OTHER_SHA1
+
 
 Revert your changes
 ==============
