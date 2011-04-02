@@ -17,12 +17,6 @@ git commit --amend
 git reset --soft HEAD^
 
 
-Updates
-==============
-# To update all branches
-git pull --all
-
-
 Branches
 ==============
 # To cherry-pick
