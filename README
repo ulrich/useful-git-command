@@ -81,6 +81,10 @@ git rebase -i HEAD~2
 git mergetool
 git rebase --continue
 
+# Remove a tag
+git tag -d TAGNAME
+# if tag is already pushed, you should push the removal
+git push origin :refs/tags/TAGNAME
 
 Bissect
 ==============
