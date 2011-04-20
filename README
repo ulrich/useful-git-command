@@ -61,6 +61,9 @@ git diff SHA1
 # View changes between 2 commits
 git diff SHA1 OTHER_SHA1
 
+# View files that have changed between 2 branches
+git diff --name-status master..branch
+
 
 Revert your changes
 ==============
